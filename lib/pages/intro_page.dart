@@ -5,7 +5,7 @@ import 'package:intro_page/utils/Strings.dart';
 import '../items/makePage.dart';
 
 class IntroPage extends StatefulWidget {
-  static final String id = "intro_page";
+  final String id = "intro_page";
   const IntroPage({super.key});
 
   @override
@@ -37,7 +37,7 @@ class _IntroPageState extends State<IntroPage> {
         actions: [
           GestureDetector(
             onTap: () {
-              Navigator.pushReplacementNamed(context, HomePage.id);
+              Navigator.pushReplacementNamed(context, const HomePage().id);
             },
             child: Padding(
               padding: EdgeInsets.only(right: 20, left: 20),
